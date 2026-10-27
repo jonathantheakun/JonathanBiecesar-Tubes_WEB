@@ -1,0 +1,368 @@
+/*1. VARIABEL WARNA & RESET*/
+:root {
+    --bg-hero: #F4EFE6;
+    --bg-white: #FFFFFF;
+    --primary-green: #567D46;
+    --primary-hover: #436236;
+    --text-dark: #1A1A1A;
+    --text-gray: #666666;
+    --footer-red: #E55353;
+    --border-color: #E5E5E5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+i {
+    font-style: normal;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 2. HEADER (Gaya LadangLima)*/
+header {
+    background-color: var(--bg-hero);
+    padding: 20px 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    font-family: Georgia, serif;
+    font-style: italic;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.nav-links a:hover {
+    opacity: 0.6;
+}
+
+.nav-actions {
+    display: flex;
+    gap: 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* 3. HERO SECTION (Gaya LadangLima)*/
+.hero {
+    background-color: var(--bg-hero);
+    padding: 40px 0 80px 0;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-subtitle {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    color: var(--text-dark);
+}
+
+.hero-title {
+    font-size: 48px;
+    font-family: Georgia, serif;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero-desc {
+    font-size: 16px;
+    color: var(--text-gray);
+    margin-bottom: 30px;
+    max-width: 400px;
+}
+
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--primary-green);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+}
+
+.hero-image {
+    flex: 1;
+    height: 400px;
+    background-color: #E6DBCE;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-gray);
+    font-weight: 600;
+}
+
+/* 4. BODY SECTION (Gaya Godly)*/
+.body-section {
+    background-color: var(--bg-white);
+    padding: 80px 0;
+}
+
+.godly-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 50px;
+}
+
+.godly-title h2 {
+    font-size: 36px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.godly-title p {
+    color: var(--text-gray);
+    font-size: 15px;
+    max-width: 400px;
+}
+
+.godly-filters {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: transparent;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-gray);
+    cursor: pointer;
+    padding: 5px 15px;
+    border-radius: 20px;
+    transition: all 0.3s;
+}
+
+.filter-btn:hover {
+    color: var(--text-dark);
+}
+
+.filter-btn.active {
+    background-color: #1A1A1A;
+    color: white;
+}
+
+.godly-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.godly-card {
+    cursor: pointer;
+}
+
+.card-image {
+    width: 100%;
+    height: 250px;
+    background-color: #F0F0F0;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+    margin-bottom: 15px;
+    transition: transform 0.3s;
+}
+
+.godly-card:hover .card-image {
+    transform: scale(1.02);
+}
+
+.card-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+/* 5. FOOTER (Gaya Airbnb)*/
+footer {
+    background-color: var(--footer-red);
+    color: white;
+    padding: 60px 0 20px 0;
+    font-size: 14px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-brand h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-brand p {
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.5;
+    opacity: 0.9;
+}
+
+.footer-selectors {
+    display: flex;
+    gap: 15px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.footer-selectors span {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    font-size: 18px;
+}
+
+.social-icons i {
+    cursor: pointer;
+}
+
+.footer-links h3 {
+    font-size: 14px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.footer-links ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-links a {
+    color: white;
+    opacity: 0.9;
+    font-size: 14px;
+    transition: opacity 0.3s;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+}
+
+.footer-legal {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-legal a:hover {
+    text-decoration: underline;
+}
+
+/*6. RESPONSIVE DESIGN  */
+@media (max-width: 992px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-desc {
+        margin: 0 auto 30px auto;
+    }
+    .godly-header {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .godly-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    .hero-title {
+        font-size: 36px;
+    }
+    .godly-grid {
+        grid-template-columns: 1fr;
+    }
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}
